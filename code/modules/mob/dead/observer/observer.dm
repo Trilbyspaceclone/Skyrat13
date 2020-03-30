@@ -442,11 +442,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 
 	usr.forceMove(pick(L))
+	// SKYRAT EDIT START
 	if(thearea.name == "Bluespace Locker")
 		var/ghostmsg
-		ghostmsg = "GHOSTTELE: [usr] has teleported as a ghost to [thearea]."
+		ghostmsg = "GHOSTTELE: [key_name(usr)] has teleported as a ghost to [thearea]."
 		log_game(ghostmsg)
 		message_admins(ghostmsg)
+	// SKYRAT EDIT END
 	update_parallax_contents()
 
 /mob/dead/observer/proc/view_gas()
